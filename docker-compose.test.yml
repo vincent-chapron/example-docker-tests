@@ -1,7 +1,4 @@
 sut:
-    container_name: example-docker-tests
-    image: vincentchapron/php:latest
+    build: .
     working_dir: /workspace
     command: ./composer.phar test
-    volumes:
-        - .:/workspace
