@@ -1,0 +1,12 @@
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="App tests for docker examples">
+            <directory
+                    suffix="Test.php"
+                    phpVersion="7.1.9"
+                    phpVersionOperator=">=">
+                tests
+            </directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
