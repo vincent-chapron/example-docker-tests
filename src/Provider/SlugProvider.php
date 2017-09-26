@@ -4,9 +4,9 @@ namespace App\Provider;
 
 class SlugProvider {
 
-    public function slugify($name) {
-        $slug = preg_replace('/[^\w]+/', '-', $name);
-        $slug = strtolower(trim($slug, '-'));
+    public function slugify($name, $separator = '_') {
+        $slug = preg_replace('/[^\w]+/', $separator, $name);
+        $slug = strtolower(trim($slug, $separator));
         return $slug;
     }
 
