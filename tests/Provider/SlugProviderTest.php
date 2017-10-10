@@ -14,7 +14,7 @@ class SlugProviderTest extends TestCase{
     }
 
     public function testSlugify() {
-        $slug = $this->slugProvider->slugify('This is my super title !', '-');
+        $slug = $this->slugProvider->slugify('This is my super title !');
         $this->assertSame('this-is-my-super-title', $slug);
     }
 
