@@ -4,10 +4,10 @@ namespace App\Provider;
 
 class SlugProvider {
 
-    public function slugify($name, $separator = '-') {
+    public function slugify($name, $separator = '-', $prefix) {
         $slug = preg_replace('/[^\w]+/', $separator, $name);
         $slug = strtolower(trim($slug, $separator));
-        return $slug;
+        return "$prefix-$slug";
     }
 
 }

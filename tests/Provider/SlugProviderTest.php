@@ -17,5 +17,10 @@ class SlugProviderTest extends TestCase{
         $slug = $this->slugProvider->slugify('This is my super title !');
         $this->assertSame('this-is-my-super-title', $slug);
     }
+    
+    public function testSlugifyWithPrefix() {
+        $slug = $this->slugProvider->slugify('This is my super title !', '_', 'sogeti');
+        $this->assertSame('sogeti_this_is_my_super_title', $slug);
+    }
 
 }
